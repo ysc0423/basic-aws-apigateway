@@ -1,0 +1,20 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: >
+  basic-aws-custom-authorizer
+  Sample SAM Template for basic-aws-custom-authorizer
+
+Resources:
+  BasicAuthorizerFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      CodeUri: ./handler.zip
+      Handler: src.app.lambda_handler
+      Runtime: python3.7
+
+Outputs:
+  BasicAuthorizerFunction:
+    Description: Basic authorizer Lambda Function ARN
+    Value: !GetAtt BasicAuthorizerFunction.Arn
+    Export:
+      Name: BasicAuthorizerFunction-Arn

@@ -1,0 +1,8 @@
+
+basic-aws-apigateway-demo/output\.yaml
+
+basic-aws-custom-authorizer/output\.yaml
+
+basic-aws-apigateway-demo-app/node_modules
+
+*.zip
